@@ -39,7 +39,7 @@ public class MinimalReproduction
         Path truststorePath = findTlsPath("truststore.jks");
 
         SslContextFactory.Server ssl = new SslContextFactory.Server();
-        ssl.setKeyStorePath(keystorePath);
+        ssl.setKeyStorePath(keystorePath.toString());
         ssl.setKeyStoreType("JKS"); // default is PKCS12
         ssl.setKeyStorePassword("changeit");
         ssl.setTrustStorePath(truststorePath.toString());
